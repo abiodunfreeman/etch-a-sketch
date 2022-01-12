@@ -1,9 +1,13 @@
-const numDiv = 16;
-const grid = document.querySelector('#grid');
+const userNum = document.querySelector('#userNum').value
+console.log(userNum.value)
 
+//grid-template-columns: repeat(4, 1fr);
+
+const grid = document.querySelector('#grid');
+grid.style.gridTemplateColumns = `repeat(${userNum}, 1fr)`;
 //grids in an array
 const gridArray = [];
-for (i = 0 ; i < numDiv; i++) {
+for (i = 0 ; i < (userNum * userNum); i++) {
     const div = document.createElement('div')
     div.textContent = i + 1;
     gridArray.push(div);
@@ -28,8 +32,6 @@ resetBtn.addEventListener('click', (e) => {
 })
 
 const colorBtn = document.querySelector('#colorBtn')
-console.log(colorBtn)
-console.log(colorBtn.value)
 
 
 
