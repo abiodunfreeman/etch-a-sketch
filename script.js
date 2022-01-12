@@ -5,6 +5,17 @@ const row2  = document.createElement('div');
 const row3  = document.createElement('div');
 const frag = document.createDocumentFragment();
 const boxes = []; //captures div 0-15 in an array
+
+//Reset button functionality
+const rBtn = document.querySelector('#reset');
+
+rBtn.addEventListener('click', () => {
+    boxes.forEach(function(box) {
+        box.classList.remove('box-hover');
+    })
+})
+
+
 for (var i = 0; i < 4; i++) {
     var div = document.createElement('div');
     div.textContent = i;
@@ -56,8 +67,8 @@ boxes.forEach(function(box) {
 })
 boxes.forEach(function(box) {
     box.addEventListener('mouseleave', (e) => {
-        console.log(`left box ${e.target.id}`)
-        console.log(e)
+        
         box.classList.toggle('box-hover');
     })
 })
+
