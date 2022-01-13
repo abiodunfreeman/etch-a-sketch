@@ -9,7 +9,7 @@ grid.style.gridTemplateColumns = `repeat(${userNum}, 1fr)`;
 const gridArray = [];
 for (i = 0 ; i < (userNum * userNum); i++) {
     const div = document.createElement('div')
-    div.textContent = i + 1;
+    
     gridArray.push(div);
     grid.appendChild(div);
 }
@@ -27,7 +27,7 @@ gridArray.forEach(function (grd)  {
 const resetBtn = document.querySelector('#reset')
 resetBtn.addEventListener('click', (e) => {
     gridArray.forEach(function (grd){
-        grd.style.backgroundColor = 'limegreen';
+        grd.style.backgroundColor = 'white';
     })
 })
 

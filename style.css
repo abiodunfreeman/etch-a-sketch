@@ -11,11 +11,11 @@ body {
 #grid {
     height:500px;
     width:500px;
-    background-color: limegreen;
+    background-color: white;
 }
 
 #options {
-    border: 3px purple dashed;
+    /* border: 3px purple dashed; */
     width: 15em;
     display:flex;
     flex-direction: column;
@@ -26,7 +26,7 @@ align-items: center;
     margin: 10px;
 }
 #middle {
-    border: 4px red solid;
+    /* border: 4px red solid; */
     display: flex;
     justify-content: center;
 }
@@ -43,10 +43,14 @@ h1 {
 #grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    border:8px outset #999;
+    -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+    -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+
 }
 
 #grid > div {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     text-align: center;
 }
 
